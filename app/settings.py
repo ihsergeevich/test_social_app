@@ -1,0 +1,22 @@
+from os.path import isfile
+from envparse import env
+
+if isfile('.env'):
+    env.read_envfile('.env')
+
+SITE_NAME = env.str('SERVICE_NAME')
+
+POSTGRES_NAME = env.str('POSTGRES_NAME')
+POSTGRES_USER = env.str('POSTGRES_USER')
+POSTGRES_PASSWORD = env.str('POSTGRES_PASSWORD')
+POSTGRES_HOST = env.str('POSTGRES_HOST')
+POSTGRES_PORT = env.int('POSTGRES_PORT')
+
+REFRESH_TOKEN_KEY = env.str('REFRESH_TOKEN_KEY')
+REFRESH_EXP_DELTA_SECONDS = env.int('REFRESH_EXP_DELTA_SECONDS')
+
+JWT_SECRET_KEY = env.str('JWT_SECRET_KEY')
+JWT_EXP_DELTA_SECONDS = env.int('JWT_EXP_DELTA_SECONDS')
+JWT_ALGORITHM = env.str('JWT_ALGORITHM')
+
+SECRET_KEY = env.str('SECRET_KEY')
