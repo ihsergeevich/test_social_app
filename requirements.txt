@@ -9,7 +9,7 @@ certifi==2020.4.5.1
 cffi==1.14.0
 chardet==3.0.4
 crypto==1.4.1
-cryptography==2.9
+cryptography==3.2
 envparse==0.2.0
 idna==2.9
 Jinja2==2.11.1
